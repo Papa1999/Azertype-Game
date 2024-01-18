@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AzerType</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Importation de la Police utilisé  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- Scripts du projet -->
+        <script src="scripts/config.js" defer></script>
+        <script src="scripts/script.js" defer></script>
+        <script src="scripts/main.js" defer></script>
+        <script src="scripts/popup.js" defer></script>
+        
+
+    </head>
+
+    <body>
+<!-- En tête de la page -->
+        <header>
+
+            <h1>AzerType</h1>
+            <h2>L'application qui permet d'écrire plus vite !</h2>
+            <h3> AzerType est une application en ligne pour apprendre à taper plus vite au clavier :) </h3>
+
+        </header>
+
+            <div id="popup-overlay">
+                <form method="get">
+                    <span id="close">&times;</span>
+                    <p>Partagez votre score</p>
+
+                        <label for="nom">Votre nom</label><br><input type="text" id="nom" placeholder="Votre nom"><br>
+                    
+                        <label for="email">Avec qui voulez-vous partager votre score ?</label><br><input type="email" id= "email" placeholder="exemple@test.com" required>
+                    <button>Envoyer</button>
+                </form>
+            </div>
+<!-- Contenu principale -->
+        <main>
+            <p id="first_p">
+                Choisissez votre option et tapez la proposition qui s'affiche dans le champs en dessous
+            </p>
+
+            <input type="radio" name="choix" value="mots" id="mots" checked><label for="mots">Mots</label>
+            <input type="radio" name="choix" value="phrases" id="phrases"><label for="phrases">Phrases</label>
+
+            <div id="grille">
+                <div id="proposition">
+                    AzertY
+                </div>
+                <input type="text" name="saisie" id="saisie">
+                <input type="submit" value="Valider" id="valider">     
+            </div> 
+
+            <p id="second_p">
+                <span id="score"> Votre score est de 0/0</span>
+            </p>
+            <button id="partager">Partager</button>
+        </main>
+        
+        
+<!-- Pied de Page -->
+        <footer>
+            @Copyright:OpenClassroom.
+        </footer>
+
+    </body>
+</html>

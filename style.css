@@ -1,0 +1,212 @@
+/* Proprieté Standard */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    color: tomato;
+}
+
+/* En tête de la Page  */
+h1, h2, h3{
+    text-align: center;
+}
+
+h1{
+    padding: 12px;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+h2{
+    padding: 8px;
+    font-size: 1.5rem;
+}
+
+h3{
+    padding: 8px;
+    font-size: 1rem;
+}
+
+
+
+/* Contenue de la Page */
+main{
+    color: white;
+    background-color: tomato;
+    width: 40%;
+    margin: 41px auto;
+    padding: 20px 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+main #first_p, main #second_p{
+    padding-bottom: 15px;
+}
+
+
+main #grille{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 2fr 1fr;
+    gap: 0.5rem;
+}
+
+main #grille #proposition{
+    font-size: 1rem;
+    padding: 20px;
+    color: tomato;
+    background-color: white;
+    grid-column-start:1;
+    grid-column-end:6;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+main #grille #saisie{
+    grid-column-start:1;
+    grid-column-end:5;
+    border: none;
+    border-radius: 10px;
+    color: tomato;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main #grille #valider{
+    grid-column-start:5;
+    grid-column-end:6;
+    color: tomato;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+main #second_p{
+    padding-top: 10px;
+}
+
+main #partager{
+    padding: 8px;
+    color: tomato;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Section de popup */
+#popup-overlay{
+    display: none;
+    background-color: rgba(133, 133, 133, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.active-popup{
+    display: flex !important;
+}
+
+
+form{
+    background-color: tomato;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    width: 20%;
+    margin: 20px auto;
+    padding: 20px 15px;
+    border-radius: 15px;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30% );
+}
+
+form p{
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+form #close{
+    position: fixed;
+    right: 0%;
+    top: -5%;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+form label{
+    padding-left: 10px;
+    padding-right:10px ;
+}
+
+form input{
+    color: tomato;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    outline: none;
+}
+
+form input::placeholder{
+    color: tomato;
+    font-weight: bold;
+}
+
+form button{
+    background-color: white;
+    color: tomato;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+/* Pied de la Page */
+footer{
+    color: white;
+    background-color: tomato;
+    padding: 27px;
+    text-align: center;
+}
+
+
+
+
+/* Media Queries */
+@media screen and (max-width:1200px) {
+    
+    main{
+        width: 75%;
+        margin: 10vh auto;
+    }
+
+    form{
+        width: 50%;
+        transform: translate(-50%, -50% );
+    }
+}
+
